@@ -47,7 +47,7 @@ export default function Machines(props: { context: contextType }) {
 
       <div className="mt-14 sm:mt-20 pt-7">
         <div>
-          <div className="w-full justify-center flex gap-1 text-xl font-medium mb-10 mx-4 lg:my-12">
+          <div className="w-full justify-center flex gap-1 text-xl font-medium mb-10 lg:my-12">
             <label className="w-2 h-auto bg-gradient-to-b from-cyan-500 to-sky-700"></label>
             <h1 className="text-2xl sm:text-3xl md:lg:text-4xl">
               {thisMachine}

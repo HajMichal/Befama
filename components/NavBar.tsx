@@ -11,12 +11,6 @@ import { useRouter } from "next/router";
 
 import { TEXT } from "../data2";
 
-// interface contextType {
-//   params: { [key: string]: string };
-//   locales: string[];
-//   locale: string;
-//   defaultLocale: string;
-// }
 
 const NavBar = () => {
 
@@ -32,6 +26,7 @@ const NavBar = () => {
       router.push(href) :
       router.push("/" + href)
     }
+
 
   return (
     <div className="z-50">
@@ -179,8 +174,8 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div>
-        <Link href="#home" legacyBehavior>
+      <div className={router.pathname === "/" ? 'block' : 'hidden'}>
+        <Link href="/"   legacyBehavior>
           <a className="btn btn-circle fixed z-50  bottom-20 right-5 motion-safe:animate-bounce">
             <p className="-rotate-90 text-white text-xl">❯</p>
           </a>
@@ -192,20 +187,3 @@ const NavBar = () => {
 
 export default NavBar;
 
-// export const getStaticPaths = ({ locales }: any ) => {
-//   return {
-//     paths: [
-//       {locale: 'pl'},
-//       {locale: 'gb'},
-//       {locale: 'de'},
-//       {locale: 'ru'},
-//     ]
-//   }
-// }
-
-// export const getStaticProps = async (context: contextType) => {
-//   console.log(context)
-//   return {
-//     props: { context },
-//   };
-// };

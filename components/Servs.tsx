@@ -23,7 +23,7 @@ import { FaTools } from "react-icons/fa";
     return (
       <div
         id="services"
-        className="flex justify-center border-y  roudned-lg bg-zinc-100"
+        className="flex justify-center border-y my-10 roudned-lg bg-zinc-100"
         ref={ref}
         style={{
           opacity: isInView ? 1 : 0,

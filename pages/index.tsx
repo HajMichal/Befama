@@ -20,7 +20,6 @@ export default function Home() {
       <Services />
       <Aboutus />
       <div
-        id="work"
         className=" py-8 flex justify-center flex-wrap gap-5 bg-wave bg-no-repeat bg-bottom"
       >
         <Workus />

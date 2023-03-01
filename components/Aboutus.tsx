@@ -80,7 +80,7 @@ const Aboutus = () => {
           <p className="px-1">{t("fact5")}</p>
         </div>
 
-        <div className="py-2 flex flex-wrap ">
+        <div className="py-2 flex flex-wrap">
           <Image
             className="rounded-lg h-44 w-full"
             height={176}
@@ -90,7 +90,7 @@ const Aboutus = () => {
             loading="lazy"
           />
           <h2 className="font-semibold text-xl p-1 mt-3"> {t("news")} </h2>
-          <p className="px-1">{t("fact4")}</p>
+          <p className="px-1" id="work" >{t("fact4")}</p>
         </div>
       </div>
       {/*  ---------------> DESKTOP <--------------- */}
@@ -213,7 +213,7 @@ const Aboutus = () => {
                 loading="lazy"
               />
             </figure>
-            <div className="card-body w-80 self-center">
+            <div id="work" className="card-body w-80 self-center">
               <h2 className="card-title"> {t("news")} </h2>
               <p className="h-auto">{t("fact4")}</p>
             </div>
