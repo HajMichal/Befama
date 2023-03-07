@@ -1,18 +1,56 @@
 import React, { useState, useRef } from "react";
 import { useTranslation } from "next-i18next";
+
+import emailjs from "@emailjs/browser";
+import { useForm, SubmitHandler } from "react-hook-form";
+
 import { useInView } from "framer-motion";
+
+interface inputs {
+  name: string;
+  email: string;
+  message: string;
+}
 
 
 const ContactForm = () => {
   const { t } = useTranslation();
-  const [state, setState] = useState();
 
   const ref = useRef(null);
+  const form = useRef <HTMLFormElement | null>(null);
+
+  const { register, handleSubmit } = useForm<inputs>();
   const isInView = useInView(ref, { once: false });
 
-  function handleChange(e: any) {
-    setState(e.target.value);
-  }
+  const [loading, setLoading] = useState(false);
+
+
+
+  const onSubmit = (_data: inputs) => {
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Wiadomość wysłana");
+        },
+        () => {
+          setLoading(false);
+          alert(
+            "Błąd serwisu. Spróbuj się skontaktować inną metodą. Przepraszamy!"
+          );
+        }
+      );
+
+    setLoading(true);
+  };
 
   return (
     <div
@@ -35,27 +73,29 @@ const ContactForm = () => {
       </h2>
 
       <form
-        action="https://formsubmit.co/info@befama.com.pl"
-        method="POST"
+        ref={form}
         className="p-3 flex flex-wrap justify-center"
+        onSubmit={handleSubmit(onSubmit)}
       >
+
         <input
+        {...register("name", {required: true})}
           className="input input-bordered input-primary w-full max-w-xs my-1 bg-white"
           type="text"
           name="name"
-          required
           placeholder={t("names")}
         />
         <input
+        {...register("email", {required: true})}
           className="input input-bordered input-primary w-full max-w-xs my-1 bg-white"
           type="email"
           name="email"
-          required
+
           placeholder={t("e-mail")}
-          onChange={(e) => handleChange(e)}
         />
         <textarea
-          className="textarea textarea-primary w-full max-w-xs max-h-40 my-3 bg-white"
+        {...register("message", {required: true, minLength: 8, maxLength: 1028,})}
+          className="textarea textarea-primary w-full h-40 max-w-xs max-h-72 my-3 bg-white"
           name="message"
           placeholder={t("question_content")}
         ></textarea>
@@ -63,7 +103,7 @@ const ContactForm = () => {
           <button
             type="submit"
             className="btn btn-primary my-2 disabled:btn-disabled "
-            disabled={!state}
+            disabled={loading}
           >
             {" "}
             {t("send")}{" "}
@@ -75,3 +115,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+

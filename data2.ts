@@ -5,7 +5,7 @@ export const MACHINES: any = {
                     {
                         name: "OB1, OB2",
                         src: "/eachmachine/1.1-Otwieracze-bel-OB1_-OB2.webp",
-                        description: "Otwieracze bel OB1, OB2, służą do wstępnego rozluźniania włókien w liniach rozluźniająco-mieszających i zasilania maszyn typu: wilk rozluźniający lub wilk zgrzeblący. Surowiec do zasilarki może być podawany mechanicznie transporterem lub pneumatycznie za pomocą cyklonu.",
+                        description: "Otwieracze bel OB1, OB2, służą do wstępnego rozluźniania włókien w liniach rozluźniająco-mieszających i zasilania maszyn typu: wilk rozluźniający lub wilk zgrzeblący. Surowiec do zasilarki może być podawany wózkiem, transporterem (OB1) lub pneumatycznie za pomocą cyklonu (OB2).",
                         parameters: [
                             {width: ["1200 mm", "1400 mm ", "1600 mm"]},
                             {power: ["4,0 kW", "4,2 kW", "4,6 kW"]}
@@ -14,7 +14,7 @@ export const MACHINES: any = {
                     {
                         name: "OB1-E, OB2-E",
                         src: "/eachmachine/1.2-Zasilarki-wagowe-z-wagą-elektroniczną-OB1-E_-OB2-E.webp",
-                        description: "Zasilarki wagowe z wagą elektroniczną OB1-E - przeznaczone do wstępnego rozluźnienia włókien w liniach otwierająco-mieszających oraz dozowania zadanych porcji surowca na transporter zbiorczy.",
+                        description: "Zasilarki wagowe z wagą elektroniczną przeznaczone do wstępnego rozluźnienia włókien w liniach otwierająco-mieszających i dozowania zadanych porcji surowca na transporter zbiorczy. Surowiec do zasilarki może być podawany: wózkiem lub transporterem (OB1-E) lub pneumatycznie za pomocą cyklonu (OB2-E).",
                         parameters: [
                             {width: ["1400 mm", "1600 mm"]},
                             {power: ["4,2 kW", "4,6 kW"]}
@@ -27,7 +27,7 @@ export const MACHINES: any = {
                 {
                     name: "TP, TPR",
                     src: "/eachmachine/2-1-transportery-zbiorcze-tp-tpr.webp",
-                    description: "Transporter zbiorczy TP przeznaczony jest do odbierania surowca z kilku zasilarek wagowych (zazwyczajod 2 do 5 szt.), a następnie przeniesienia go do kolejnych maszyn w linii przygotowawczej. Transporter w wersji TPR jest wyposażony dodatkowo w wałek rozluźniający przed wentylatorem.",
+                    description: "Transporter zbiorczy TP przeznaczony jest do odbierania surowca z kilku zasilarek wagowych (zazwyczaj od 2 do 5 szt.), a następnie przeniesienia go do kolejnych maszyn w linii przygotowawczej. Transporter w wersji TPR jest wyposażony dodatkowo w wałek rozluźniający przed wentylatorem.",
                     parameters: [
                         {width: ["800 mm", "1000 mm"]},
                         {power: ["max 1,1 kW"]},
@@ -71,7 +71,7 @@ export const MACHINES: any = {
                 {
                     name: "MW6",
                     src: "/eachmachine/4-2-komora-sekcyjna-mw6.webp",
-                    description: "Mieszarka wielokomorowa MW6 służy do dokładnego przygotowania mieszanki włókien tworzonej z kilku komponentów włókien o długości nie przekraczającej 80 mm. Przy tworzeniu mieszanki z kilku surowców konieczne jest wcześniejsze ich odważenie i wstępne wymieszanie.",
+                    description: "Mieszarka wielokomorowa MW6 służy do dokładnego przygotowania mieszanki tworzonej z kilku komponentów włókien o długości nie przekraczającej 80 mm. Przy tworzeniu mieszanki z kilku surowców konieczne jest wcześniejsze ich odważenie i wstępne wymieszanie.",
                     parameters: [
                         {width: ["1200 mm"]},
                         {power: ["8 kW"]},
@@ -124,7 +124,7 @@ export const MACHINES: any = {
                 {
                     name: "CU121",
                     src: "/eachmachine/7-1-linia-laboratoryjna-cu121.webp",
-                    description: "Linia laboratoryjna CU121 ma zastosowanie do celów manipulacyjnych surowcami włókienniczymi - melanżowania kolorów oraz dobierania najlepszych parametrów produkcyjnych dla różnych surowców i ich mieszanek. Linia w połączeniu z układaczem, igłowarką, kalandrem lub innymi maszynami, może pomagać w opracowaniu nowych technologii w ośrodkach badawczych, instytutach lub innych tego typu placówkach. Linia może być wyposażona jest w nowoczesną zasilarkę 1E, zgrzeblarkę 3KA i urządzenie zagęszczające runo 5AZ.",
+                    description: "Linia laboratoryjna CU121 ma zastosowanie do celów manipulacyjnych surowcami włókienniczymi - melanżowania kolorów oraz dobierania najlepszych parametrów produkcyjnych dla różnych surowców i ich mieszanek. Linia w połączeniu z układaczem, igłowarką, kalandrem lub innymi maszynami, może pomagać w opracowaniu nowych technologii w ośrodkach badawczych, instytutach lub innych tego typu placówkach. Linia może być wyposażona w nowoczesną zasilarkę 1E, zgrzeblarkę 3KA i urządzenie zagęszczające runo 5AZ.",
                     parameters: [
                         {width: ["500 mm", "1000 mm"]},
                         {power: ["4 kW", "9 kW"]},
@@ -203,7 +203,7 @@ export const MACHINES: any = {
                 {
                     name: "Szarparki AC5, AB19",
                     src: "/eachmachine/10-3-szarparki-ac5-ab19.webp",
-                    description: "Szarparki AC5 i AB19 przeznaczone są do odzyskiwania surowca z odpadów powstałych podczas procesu produkcji, takich jak wykroje, odcięte brzegi lub wybrakowane produkty. AC5 dzięki małym gabarytom znajdzie swoje miejsce w każdym zakładzie włókienniczym. Jeśli jednak potrzebujemy większej maszyny do odzyskiwania surowca powinniśmy pomyśleć o AB19 która posiada większe gabaryty i zapewni większe wydajności.",
+                    description: "Szarparki AC5 i AB19 przeznaczone są do odzyskiwania surowca z odpadów powstałych podczas procesu produkcji. AC5 dzięki małym gabarytom znajdzie swoje miejsce w każdym zakładzie włókienniczym. Jeśli jednak potrzebujemy większej maszyny do odzyskiwania surowca powinniśmy pomyśleć o AB19 która posiada większe gabaryty i zapewni większe wydajności.",
                     parameters: [
                         {width: ["AC5 - 500 mm", "AB19- 1000 mm", "AB19- 1500 mm"]},
                         {power: ["14 kW", "28 kW", "36 kW"]}
@@ -212,7 +212,7 @@ export const MACHINES: any = {
                 {
                     name: "Szarparka krajek AC4B",
                     src: "/eachmachine/10-4-szarparka-krajek-ac4b.webp",
-                    description: "Szarparka krajek AC4B przeznaczona jest do odzyskiwania surowca z odciętych brzegów włóknin (krajek) podczas procesu produkcji. Dzięki zastosowaniu płynnej regulacji prędkości wprowadzania surowca, maszyna może pracować w systemie ciągłym z liniami do włóknin w różnych technologiach. Maszyna wyposażona jest w indywidualny system pneumatycznego odbioru szarpanki.",
+                    description: "Szarparka krajek AC4B przeznaczona jest do odzyskiwania surowca z odciętych brzegów włóknin powstałych podczas procesu produkcji. Dzięki zastosowaniu płynnej regulacji prędkości zasilania, maszyna może pracować w systemie ciągłym z liniami do włóknin w różnych technologiach.",
                     parameters: [
                         {width: ["250 mm", "500 mm"]},
                         {power: ["7 kW", "12 kW"]}
@@ -225,7 +225,7 @@ export const MACHINES: any = {
                 {
                     name: "Kondensery obrotowe, odpylajace",
                     src: "/eachmachine/11-1-kondensery-odpylajace.webp",
-                    description: "Kondenser odpylający przeznaczony do dozowania surowca w instalacjach transportu pneumatycznego. Działanie urządzenia polega na oddzielaniu powietrza oraz kurzu od surowca na końcowym odcinku instalacji transportującej surowiec włókienniczy. Kondenser instalowany jest w komplecie ze stacją filtrów workowych. W wersji specjalnej posiada dodatkową siatkę na bębnie zabezpieczającą przed przedostawaniem się drobnych włókien do filtrów, jednocześnie zabezpieczając bęben przed ścieraniem w przypadku, włókien szklanych, ceramicznych, bazaltowych czy węglowych. KO – kondenser obrotowy wykonanie standardowe, KOS- kondenser obrotowy z dodatkową siatką na bębnie.",
+                    description: "Kondenser odpylający przeznaczony do dozowania surowca w instalacjach transportu pneumatycznego. Działanie urządzenia polega na oddzielaniu powietrza oraz kurzu od surowca na końcowym odcinku instalacji transportującej surowiec włókienniczy. Kondenser instalowany jest w komplecie ze stacją filtrów workowych. W wersji specjalnej posiada dodatkową siatkę na bębnie zabezpieczającą przed przedostawaniem się drobnych włókien do filtrów, jednocześnie zabezpieczając bęben przed ścieraniem w przypadku, włókien szklanych, ceramicznych, bazaltowych czy węglowych.",
                     parameters: [
                         {width: ["1000 mm", "1200 mm", "1500 mm"]},
                         {power: ["1,5 kW", "2,2 kW", "2,8 kW"]},
@@ -235,7 +235,7 @@ export const MACHINES: any = {
                 {
                     name: 'Cyklony',
                     src: "/eachmachine/11-2-cyklony.webp",
-                    description: "Cyklony podające stosowane w systemie transportu pneumatycznego. Są przeznaczone do podawania włókna do komory mieszania ciągłej pracy lub do wszelkiego rodzaju skrzyń zasilarek, szybów lub boksów. Oferujemy cyklony cyklony zwykłe, kierunkowe i odpylające. CY1 – Cyklon odpylający, CY2 – Cyklon podający zawężany, kierunkowy, CY3 – Cyklon podający zwykły.",
+                    description: "Cyklony podające stosowane w systemie transportu pneumatycznego. Są przeznaczone do podawania włókna do komór mieszalniczych lub do wszelkiego rodzaju skrzyń zasilarek, szybów lub boksów. Oferujemy cyklony zwykłe, kierunkowe i odpylające. CY1 – Cyklon odpylający, CY2 – Cyklon podający zawężany, kierunkowy, CY3 – Cyklon podający zwykły.",
                 },
                 {
                     name: 'Filtry',
@@ -249,7 +249,7 @@ export const MACHINES: any = {
                 {
                     name: 'Instalacje transportu pneumatycznego',
                     src: "/eachmachine/12.1-instalacje-transp-pneum.webp",
-                    description: "Oferowane instalacje transportu pneumatycznego wykonywane są standardowo z blachy cynkowanej o specjalnym, gładkim wykończeniu powierzchni wewnętrznej. Elementy instalacji: PS – przewody stalowe o średnicach 150 mm, 200 mm, 250mm, 300mm | PE – przewody elastyczne (spiro) o średnicach 150 mm, 200 mm, 250mm, 300mm | RO – rozdzielacze obrotowe | WPT – wentylatory promieniowe."
+                    description: "Oferowane instalacje transportu pneumatycznego wykonywane są standardowo z blachy cynkowanej o specjalnym, gładkim wykończeniu powierzchni wewnętrznej. Elementy instalacji: PS – przewody stalowe o średnicach 150 mm, 200 mm, 250mm, 300mm | PE – przewody elastyczne o średnicach 150 mm, 200 mm, 250mm, 300mm | RO – rozdzielacze obrotowe | WPT – wentylatory promieniowe."
                 }
             ]
         }
