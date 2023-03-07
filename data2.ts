@@ -1153,5 +1153,27 @@ export const TEXT: any = {
         }
     }
 }
-// type  = machine group
-// tag = model
+
+
+export const HEADERS: any = {
+    "pl": {
+        tittle: "Befama - producent maszyn do przemysłu włókienniczego",
+        description: "Od 1956 roku nasza firma dostarcza innowacyjne rozwiązania maszynowe dla przemysłu włókienniczego. Dzięki dekadom doświadczeń i wiedzy, możesz nam zaufać w kwestii jakości i niezawodności.",
+        keywords: "Maszyny do przemysłu włókienniczego"
+    },
+    "gb": {
+        tittle: "Befama - textile machinery manufacturer",
+        description: "Since 1956, our company has been providing innovative machine solutions for the textile industry. With decades of experience and expertise, you can trust us for quality and reliability",
+        keywords: "Machinery for the textile industry"
+    },
+    "de": {
+        tittle: "Befama - Hersteller von Maschinen für die Textilindustrie",
+        description: "Seit 1956 bietet unser Unternehmen innovative Maschinenlösungen für die Textilindustrie an. Dank unserer jahrzehntelangen Erfahrung und Kompetenz können Sie sich auf unsere Qualität und Zuverlässigkeit verlassen.",
+        keywords: "Maschinen für die Textilindustrie"
+    },
+    "ru": {
+        tittle: "Befama - производитель оборудования для текстильной промышленности",
+        description: "С 1956 года наша компания предлагает инновационные машинные решения для текстильной промышленности. Благодаря десятилетиям опыта и знаний, вы можете доверять нам в вопросах качества и надежности.",
+        keywords: "Машины для текстильной промышленности"
+    }
+}

@@ -72,7 +72,7 @@ const NavBar = () => {
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-px bg-black"></span>
             </div>
             <div className="cursor-pointer group transition-all duration-300 p-2 sm:p-3 hidden lg:block">
-              <Link href={"#work"} onClick={(e) => handleClick(e, '#work')} > {thisTexts.career} </Link>
+              <Link href={"#workwithus"} onClick={(e) => handleClick(e, '#workwithus')} > {thisTexts.career} </Link>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-px bg-black"></span>
             </div>
 
@@ -103,7 +103,7 @@ const NavBar = () => {
                 <Link href="#machines" onClick={(e) => handleClick(e, '#machines')} > {thisTexts.machines} </Link>
               </li>
               <li className="hover:bg-gray-200 duration-200 p-3 rounded ">
-                <Link href="#work" onClick={(e) => handleClick(e, '#work')} > {thisTexts.career} </Link>
+                <Link href="#workwithus" onClick={(e) => handleClick(e, '#workwithus')} > {thisTexts.career} </Link>
               </li>
               <li className="hover:bg-gray-200 duration-200 p-3 rounded ">
                 <Link href={"/department"}> {thisTexts.contact} </Link>

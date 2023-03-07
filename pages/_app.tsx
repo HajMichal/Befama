@@ -1,9 +1,11 @@
 import '@/styles/globals.css'
+import { HEADERS } from '@/data2';
 
-import type { AppProps } from 'next/app'
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import type { AppProps } from 'next/app'
 
-import { appWithTranslation, useTranslation } from 'next-i18next'
+import { appWithTranslation } from 'next-i18next'
 import 'i18next'
 
 declare module 'i18next' {
@@ -13,12 +15,17 @@ declare module 'i18next' {
 }
 
 const MyHeadTags = () => {
-  const { t } = useTranslation();
+
+  const { locale, locales } = useRouter()
+
+  // @ts-ignore
+  const thisHeaders: any = HEADERS[locale] as string
+
   return(
   <Head>
-        <title>{t('Befama-przemysł')}</title>
-        <meta name="description" content={t('Befama-opis')}/>
-        <meta name='keywords' content={t("Befama-keywords")} />
+        <title>{ thisHeaders.tittle }</title>
+        <meta name="description" content={ thisHeaders.description }/>
+        <meta name='keywords' content={ thisHeaders.keywords } />
         <meta name='robots' content='index, follow' />
   </Head>
   )

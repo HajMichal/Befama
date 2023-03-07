@@ -213,9 +213,9 @@ const Aboutus = () => {
                 loading="lazy"
               />
             </figure>
-            <div id="work" className="card-body w-80 self-center">
+            <div id="workwithus" className="card-body w-80 self-center">
               <h2 className="card-title"> {t("news")} </h2>
-              <p className="h-auto">{t("fact4")}</p>
+              <p className="h-auto" >{t("fact4")}</p>
             </div>
           </div>
         </div>
