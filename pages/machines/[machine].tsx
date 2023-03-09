@@ -13,6 +13,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 import { MACHINES, TEXT } from "../../data2";
+import Head from 'next/head';
 
 
 interface contextType {
@@ -35,13 +36,17 @@ interface thisParams {
   collectDiameter: string[];
 }
 
+
+
 export default function Machines(props: { context: contextType }) {
   const { locale, locales, defaultLocale } = props.context;
   
   var thisMachine = props.context.params.machine;
   var thisTexts: any = TEXT[locale].text as string;
   var thisModels = MACHINES[locale][thisMachine]?.models;
+
   return (
+    <>
     <div className="bg-stone-100">
       <NavBar />
 
@@ -55,6 +60,10 @@ export default function Machines(props: { context: contextType }) {
           </div>
           {thisModels?.map((model: thisModel, index: number) => (
             <div key={index}>
+              <Head>
+                <title>{ model.name + " | BEFAMA"}</title>
+                <meta name="description" content={ model.description }/>
+              </Head>
               <div className="md:hidden">
                 <div className="flex w-full justify-center flex-wrap">
                   <Image
@@ -371,6 +380,7 @@ export default function Machines(props: { context: contextType }) {
 
       <Footer />
     </div>
+    </>
   );
 }
 
