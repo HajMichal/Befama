@@ -94,7 +94,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div id="WEB_AUTHOR" className="w-full text-center  text-gray-600 ">
+      <div id="WEB_AUTHOR" className="w-full text-center  text-gray-300 ">
         <hr className="border-1 border-zinc-100" />
         <div>
           <h1 className="p-2 mt-2"> Befama ®2023</h1>

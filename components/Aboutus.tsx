@@ -72,7 +72,7 @@ const Aboutus = () => {
             className="rounded-lg h-44 w-full"
             height={176}
             width={264}
-            src="/mainPage/dostawcy.webp"
+            src="/mainPage/falowniki.webp"
             alt="Machine-control"
             loading="lazy"
           />
