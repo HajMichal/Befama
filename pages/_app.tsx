@@ -27,6 +27,7 @@ const MyHeadTags = () => {
         <meta name="description" content={ thisHeaders.description }/>
         <meta name='keywords' content={ thisHeaders.keywords } />
         <meta name='robots' content='index, follow' />
+        <meta name="google-site-verification" content="ien6M7KQqQz9YHSU6ChgLO0F8HEM-05wwDlQc8PfDKM" />
   </Head>
   )
 };
