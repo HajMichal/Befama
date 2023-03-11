@@ -42,7 +42,7 @@ const Aboutus = () => {
             className="rounded-lg h-44 w-full"
             height={176}
             width={264}
-            src="/mainPage/AB6.webp"
+            src="/mainPage/specjalizacje.webp"
             alt="Machine-ukladacz"
             loading="lazy"
           />
@@ -57,7 +57,7 @@ const Aboutus = () => {
             className="rounded-lg h-44 w-full"
             height={176}
             width={264}
-            src="/mainPage/teeth.webp "
+            src="/mainPage/dostawcy.webp"
             alt="Machine-CU661"
             loading="lazy"
           />
@@ -138,7 +138,7 @@ const Aboutus = () => {
                 className="rounded-lg self-center h-auto w-96 my-4"
                 height={176}
                 width={264}
-                src="/mainPage/AB6.webp"
+                src="/mainPage/specjalizacje.webp"
                 alt="AB6"
                 loading="lazy"
               />
