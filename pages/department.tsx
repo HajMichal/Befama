@@ -53,7 +53,7 @@ const Department = () => {
               <h2 className="card-title text-2xl">{t("dep1")}</h2>
               <h3 className="my-1 text-lg font-semibold">Marek Janoszek</h3>
               <h5 className="my-1">
-                <p className="font-semibold" onClick={() => "window.open('tel:+48 514 598 117');"} >{t("phone")}</p>+48 514 598 117
+                <p className="font-semibold" >{t("phone")}</p>+48 514 598 117
               </h5>
               <h5 className="my-1">
                 <p className="font-semibold">e-mail:</p>m.janoszek@befama.com.pl
