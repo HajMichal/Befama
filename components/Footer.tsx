@@ -93,6 +93,19 @@ const Footer = () => {
           REGON 241784213
         </p>
       </div>
+      <div id="COPMANY NIP" className="p-2 max-w-xs">
+      <p className="text-center text-sm text-zinc-200 max-w-xs">
+        INFORMUJEMY, ŻE AKTA OSOBOWE I DOKUMENTY PŁACOWE
+          BYŁYCH PRACOWNIKÓW BEFAMY ZNAJDUJĄ SIĘ W: {" "}
+          <label className="text-teal-300">
+           ARCHIWUM ZLIKWIDOWANYCH PRZEDSIĘBIORSTW PAŃSTWOWYCH
+          43-100 TYCHY, UL. PRZEMYSŁOWA 51, TEL. 32 326 46 08
+          </label>
+          {" "}
+          ARCHIWUM WYDAJE ZAŚWIADCZENIA DO USTALENIA
+          OKRESU ZATRUDNIENIA I KAPITAŁU POCZĄTKOWEGO - RP-7
+        </p>
+      </div>
 
       <div id="WEB_AUTHOR" className="w-full text-center  text-gray-300 ">
         <hr className="border-1 border-zinc-100" />

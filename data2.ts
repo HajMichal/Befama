@@ -194,7 +194,7 @@ export const MACHINES: any = {
                 {
                     name: "Otwieracz zgrzeblący OZ, POZ",
                     src: "/eachmachine/10.2-otwieracz-oz-poz.webp",
-                    description: "Nowoczesna maszyna rozwłókniająca, o bardzo dużej skuteczności rozwłókniania o kompaktowej zwartej budowie. Została wyposażona, w zależności od wersji, w jeden lub dwa bębny rozwłókniające współpracujące z wałkami roboczymi umieszczonymi na ich obwodach. Główną cechą tych maszyn jest bardzo wysoki stopień otwarcia, zwłaszcza w wersji tandem. Dzięki temu odzyskane włókna można ponownie wykorzystywać w procesie produkcji.",
+                    description: "Nowoczesna maszyna rozwłókniająca, o bardzo dużej skuteczności rozwłókniania i kompaktowej budowie. Została wyposażona, w zależności od wersji, w jeden lub dwa bębny rozwłókniające współpracujące z wałkami roboczymi umieszczonymi na ich obwodach. Główną cechą tych maszyn jest bardzo wysoki stopień otwarcia, zwłaszcza w wersji tandem. Dzięki temu odzyskane włókna można ponownie wykorzystywać w procesie produkcji.",
                     parameters: [
                         {width: ["1000 mm", "1500 mm"]},
                         {power: ["24 kW", "38 kW"]}
