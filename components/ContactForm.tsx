@@ -8,6 +8,7 @@ import { useInView } from "framer-motion";
 
 interface inputs {
   name: string;
+  phone: string;
   email: string;
   message: string;
 }
@@ -19,7 +20,14 @@ const ContactForm = () => {
   const ref = useRef(null);
   const form = useRef <HTMLFormElement | null>(null);
 
-  const { register, handleSubmit } = useForm<inputs>();
+  const { register, handleSubmit } = useForm<inputs>({
+    defaultValues: {
+      email: "",
+      name: "",
+      message: "",
+      phone: "",
+    },
+  });
   const isInView = useInView(ref, { once: false });
 
   const [loading, setLoading] = useState(false);
@@ -29,11 +37,17 @@ const ContactForm = () => {
   const onSubmit = (_data: inputs) => {
     if (!form.current) return;
 
+    var params = {
+      from_name: _data.name,
+      from_phone: _data.phone,
+      email_id: _data.email,
+      message: _data.message
+    }
     emailjs
-      .sendForm(
+      .send(
         process.env.NEXT_PUBLIC_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-        form.current,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,    
+        params,
         process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
@@ -86,11 +100,17 @@ const ContactForm = () => {
           placeholder={t("names")}
         />
         <input
+        {...register("phone", {required: true})}
+          className="input input-bordered input-primary w-full max-w-xs my-1 bg-white"
+          type="text"
+          name="phone"
+          placeholder={t("number")}
+        />
+        <input
         {...register("email", {required: true})}
           className="input input-bordered input-primary w-full max-w-xs my-1 bg-white"
           type="email"
           name="email"
-
           placeholder={t("e-mail")}
         />
         <textarea
@@ -113,7 +133,7 @@ const ContactForm = () => {
     </div>
   );
 };
-
+// info@befama.com.pl
 export default ContactForm;
 
 
