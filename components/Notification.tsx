@@ -29,7 +29,7 @@ export default function Notification() {
               />
             </Link>
             <div
-              className="w-5 h-5 sm:w-9 sm:h-9 rounded-full absolute right-2 sm:right-2 top-1 flex justify-center items-center cursor-pointer"
+              className="w-5 h-5 sm:w-9 sm:h-9 rounded-full absolute right-2 sm:right-2 top-1 flex justify-center items-center cursor-pointer hover:scale-125 duration-200"
               onClick={() => setView(!view)}
             >
               <RxCross2 className="text-2xl" />
