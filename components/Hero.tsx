@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <div className="bg-black">
       <div className="z-20 absolute top-72 sm:top-24 md:top-[98px] left-0 right-0 ml-auto mr-auto max-w-[600px]">
-        <Notification />
+        {/* <Notification /> */}
       </div>
       <div
         id="home"
