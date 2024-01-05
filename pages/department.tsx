@@ -6,13 +6,13 @@ import { BsClockFill } from "react-icons/bs";
 import { useInView } from "framer-motion";
 
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import ContactForm from "../components/ContactForm";
 import Map from "../components/Map";
-
+import { LuMail, LuPhoneCall } from "react-icons/lu";
 
 const Department = () => {
   const { t } = useTranslation();
@@ -32,83 +32,25 @@ const Department = () => {
     >
       <NavBar />
       <div className="pt-24 flex justify-center flex-wrap bg-white">
-        <div className="flex justify-center text-2xl md:text-4xl text-center font-bold my-8 w-full">
+        <div className="flex justify-center text-2xl md:text-4xl text-center font-bold py-8 w-full">
           <h1>{t("dep_header")}</h1>
         </div>
-        <div className="flex flex-wrap justify-center max-w-5xl lg:gap-8 md:gap-5 mb-10 ">
-          <div className="card w-80 bg-white shadow-xl my-3 border-t">
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{t("secretariat")}</h2>
-
-              <h5 className="my-1">
-                <p className="font-semibold">{t("phone")}</p>+48 33 8 611 760{" "}
-              </h5>
-              <h5 className="my-1">
-                <p className="font-semibold">e-mail:</p>info@befama.com.pl
-              </h5>
-            </div>
+        <div className="flex flex-wrap justify-center max-w-5xl lg:gap-20 md:gap-10 py-10">
+          <div className="flex items-center flex-col">
+            <LuPhoneCall className="w-12 h-12" />
+            <p className=" text-xl mt-8">+48 33 8 611 760</p>
+            <p className=" text-xl mt-5">+48 796 150 368</p>
+            <p className=" text-xl mt-5">+48 514 598 117</p>
           </div>
-          <div className="card w-80 bg-white shadow-xl my-3 border-t">
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{t("dep1")}</h2>
-              <h3 className="my-1 text-lg font-semibold">Marek Janoszek</h3>
-              <h5 className="my-1">
-                <p className="font-semibold" >{t("phone")}</p>+48 514 598 117
-              </h5>
-              <h5 className="my-1">
-                <p className="font-semibold">e-mail:</p>m.janoszek@befama.com.pl
-              </h5>
-            </div>
-          </div>
-          <div className="card w-80 bg-white shadow-xl my-3 border-t">
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{t("dep1")}</h2>
-              <h3 className="my-1 text-lg font-semibold">Zbigniew Haj</h3>
-              <h5 className="my-1">
-                <p className="font-semibold">{t("phone")}</p>+48 796 150 368
-              </h5>
-              <h5 className="my-1">
-                <p className="font-semibold">e-mail:</p>z.haj@befama.com.pl
-              </h5>
-            </div>
-          </div>
-          <div className="card w-80 bg-white shadow-xl my-3 border-t">
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{t("dep3")}</h2>
-              <h3 className="my-1 text-lg font-semibold">Kamil Żmijowski</h3>
-              <h5 className="my-1">
-                <p className="font-semibold">{t("phone")}</p>+48 600 005 479
-              </h5>
-              <h5 className="my-1">
-                <p className="font-semibold">e-mail:</p>
-                k.zmijowski@befama.com.pl
-              </h5>
-            </div>
-          </div>
-          <div className="card w-80 bg-white shadow-xl my-3 border-t">
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{t("dep2")}</h2>
-              <h3 className="my-1 text-lg font-semibold">Czesław Krupa</h3>
-              <h5 className="my-1">
-                <p className="font-semibold">{t("phone")}</p>+48 605 216 970
-              </h5>
-              <h5 className="my-1">
-                <p className="font-semibold">e-mail:</p>cz.krupa@befama.com.pl
-              </h5>
-            </div>
-          </div>
-          <div className="card w-80 bg-white shadow-xl my-3 border-t">
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{t("dep4")}</h2>
-              <h5 className="my-1">
-                <p className="font-semibold">e-mail:</p>zakupy@befama.com.pl
-              </h5>
-            </div>
+          <div className="h-full border-l" />
+          <div className="flex items-center flex-col ">
+            <LuMail className="w-12 h-12" />
+            <p className=" text-xl mt-8 ">info@befama.com.pl</p>
           </div>
         </div>
         <div className="w-full flex justify-center flex-wrap border-t py-6 md:py-10 bg-stone-100">
           <div className=" w-full mx-3 sm:mx-10 ">
-            <div className="flex flex-wrap justify-center gap-10 mb-3 md:mb-6">
+            <div className="flex flex-wrap justify-center lg:gap-20 gap-10 mb-3 md:mb-6">
               <div className="text-center ">
                 <h2 className="text-2xl font-semibold mb-1 flex  justify-center items-center text-center">
                   {" "}
@@ -150,15 +92,12 @@ const Department = () => {
   );
 };
 
-
-
-
-export async function getStaticProps({ locale }: {locale: string}) {
+export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common']))
-    }
-  }
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }
 
 export default Department;
