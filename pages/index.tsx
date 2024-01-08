@@ -19,7 +19,7 @@ export default function Home() {
       <Machine />
       <Services />
       <Aboutus />
-      <div className=" py-8 flex justify-center flex-wrap gap-5 bg-wave bg-no-repeat bg-bottom">
+      <div className=" py-8 flex justify-center flex-wrap gap-10 mt-10 bg-wave bg-no-repeat bg-bottom">
         <Workus />
         <ContactForm />
       </div>

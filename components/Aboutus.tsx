@@ -1,21 +1,11 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
 const Aboutus = () => {
   const { t } = useTranslation();
-  const ref1 = useRef(null);
-  const isInView1 = useInView(ref1, { once: true });
-  const ref2 = useRef(null);
-  const isInView2 = useInView(ref2, { once: true });
-  const ref3 = useRef(null);
-  const isInView3 = useInView(ref3, { once: true });
-  const ref4 = useRef(null);
-  const isInView4 = useInView(ref4, { once: true });
-  const ref5 = useRef(null);
-  const isInView5 = useInView(ref5, { once: true });
 
   return (
     <div className=" border-none flex justify-center w-full">
@@ -100,146 +90,34 @@ const Aboutus = () => {
         </div>
         {/*  ---------------> DESKTOP <--------------- */}
         <div id="desktop" className="hidden md:block ">
-          <div className="mt-5 ">
-            <div
-              className="card card-side bg-white shadow-xl flex border-t my-5 lg:mr-96 py-3"
-              ref={ref1}
-              style={{
-                transform: isInView1 ? "none" : "translateX(-50px)",
-                opacity: isInView1 ? 1 : 0,
-                transition: "all 1.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-              }}
-            >
-              <figure>
-                <Image
-                  className="rounded-lg m-2 ml-5 self-center h-64 w-96"
-                  height={176}
-                  width={264}
-                  src="/mainPage/global.webp"
-                  alt="Global"
-                  loading="lazy"
-                />
-              </figure>
-              <div className="card-body w-full max-w-md self-center">
-                <h2 className="card-title"> {t("about_us")} </h2>
-                <p className="h-auto">{t("fact1")}</p>
-              </div>
-            </div>
-            {/* <div>
-              <Image
-                className="rounded-lg m-2 ml-5 self-center h-64 w-96"
-                height={176}
-                width={264}
-                src="/mainPage/global.webp"
-                alt="Global"
-                loading="lazy"
-              />
-              <div className="card-body w-full max-w-md self-center">
-                <h2 className="card-title font-orkney">
-                  {" "}
-                  {t("about_us").toUpperCase()}{" "}
-                </h2>
-                <p className="h-auto">{t("fact1")}</p>
-              </div>
-            </div> */}
-            <div
-              className="card card-side bg-white shadow-xl flex border-t my-5 lg:ml-96 pr-5"
-              ref={ref2}
-              style={{
-                transform: isInView2 ? "none" : "translateX(50px)",
-                opacity: isInView2 ? 1 : 0,
-                transition: "all 1.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-              }}
-            >
-              <div className="card-body w-full max-w-md self-center">
-                <h2 className="card-title"> {t("specialization")} </h2>
-                <p className="h-auto">{t("fact2")}</p>
-              </div>
-              <figure>
-                <Image
-                  className="rounded-lg self-center h-auto w-96 my-4"
-                  height={176}
-                  width={264}
-                  src="/mainPage/specjalizacje.webp"
-                  alt="AB6"
-                  loading="lazy"
-                />
-              </figure>
-            </div>
-            <div
-              className="card card-side bg-white shadow-xl flex border-t my-5 lg:mr-96 items-center"
-              ref={ref3}
-              style={{
-                transform: isInView3 ? "none" : "translateX(-50px)",
-                opacity: isInView3 ? 1 : 0,
-                transition: "all 1.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-              }}
-            >
-              <figure>
-                <Image
-                  className="rounded-lg m-2 ml-5 self-center h-72 w-96 "
-                  height={176}
-                  width={264}
-                  src="/mainPage/dostawcy.webp"
-                  alt="Teeth Machine"
-                  loading="lazy"
-                />
-              </figure>
-              <div className="card-body w-full max-w-md self-center">
-                <h2 className="card-title"> {t("offer_head")} </h2>
-                <p className="h-auto">{t("fact3")}</p>
-              </div>
-            </div>
-
-            <div
-              className="card card-side bg-white shadow-xl p-3 flex border-t my-5 lg:ml-96"
-              ref={ref4}
-              style={{
-                transform: isInView4 ? "none" : "translateX(50px)",
-                opacity: isInView4 ? 1 : 0,
-                transition: "all 1.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-              }}
-            >
-              <div className="card-body w-full max-w-md self-center">
-                <h2 className="card-title"> {t("guarantee")} </h2>
-                <p className="h-auto">{t("fact5")}</p>
-              </div>
-              <figure>
-                <Image
-                  className="rounded-lg m-2 ml-5 self-center h-auto w-96"
-                  height={176}
-                  width={264}
-                  src="/mainPage/falowniki.webp"
-                  alt="AB-6"
-                  loading="lazy"
-                />
-              </figure>
-            </div>
-
-            <div
-              className="card card-side bg-white shadow-xl flex border-t my-5 lg:mr-96 items-center py-2"
-              ref={ref5}
-              style={{
-                transform: isInView5 ? "none" : "translateX(-50px)",
-                opacity: isInView5 ? 1 : 0,
-                transition: "all 1.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-              }}
-            >
-              <figure>
-                <Image
-                  className="rounded-lg m-2 ml-5 self-center h-auto w-96"
-                  height={176}
-                  width={264}
-                  src="/mainPage/itma.webp"
-                  alt="Itma logo"
-                  loading="lazy"
-                />
-              </figure>
-              <div id="workwithus" className="card-body w-80 self-center">
-                <h2 className="card-title"> {t("news")} </h2>
-                <p className="h-auto">{t("fact4")}</p>
-              </div>
-            </div>
+          <div className="mt-5 flex flex-col gap-15 ">
+            <FactComponent
+              title={t("about_us")}
+              description={t("fact1")}
+              src="/mainPage/global.webp"
+            />
+            <FactComponent
+              title={t("specialization")}
+              description={t("fact2")}
+              src="/mainPage/specjalizacje.webp"
+              left
+            />
+            <FactComponent
+              title={t("offer_head")}
+              description={t("fact3")}
+              src="/mainPage/dostawcy.webp"
+            />
+            <FactComponent
+              title={t("guarantee")}
+              description={t("fact4")}
+              src="/mainPage/falowniki.webp"
+              left
+            />
+            <FactComponent
+              title={t("news")}
+              description={t("fact4")}
+              src="/mainPage/itma.webp"
+            />
           </div>
         </div>
       </div>
@@ -249,31 +127,49 @@ const Aboutus = () => {
 
 export default Aboutus;
 
-// const FactComponent = () => {
-//   return (
-//               <div
-//             className="card card-side bg-white shadow-xl flex border-t my-5 lg:mr-96 py-3"
-//             // ref={ref1}
-//             // style={{
-//             //   transform: isInView1 ? "none" : "translateX(-50px)",
-//             //   opacity: isInView1 ? 1 : 0,
-//             //   transition: "all 1.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-//             // }}
-//           >
-//             <figure>
-//               <Image
-//                 className="rounded-lg m-2 ml-5 self-center h-64 w-96"
-//                 height={176}
-//                 width={264}
-//                 src="/mainPage/global.webp"
-//                 alt="Global"
-//                 loading="lazy"
-//               />
-//             </figure>
-//             <div className="card-body w-full max-w-md self-center">
-//               <h2 className="card-title"> {t("about_us")} </h2>
-//               <p className="h-auto">{t("fact1")}</p>
-//             </div>
-//           </div>
-//   )
-// }
+interface FactComponentType {
+  title: string;
+  description: string;
+  src: string;
+  left?: boolean;
+}
+const FactComponent = ({
+  title,
+  description,
+  src,
+  left = false,
+}: FactComponentType) => {
+  return (
+    <motion.div
+      className="flex gap-5"
+      initial={{
+        opacity: 0,
+        filter: "blur(4px)",
+        translateX: left ? 250 : -250,
+      }}
+      whileInView={{ opacity: 1, filter: "blur(0px)", translateX: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      {left && (
+        <div className="card-body w-full max-w-md self-center pl-3">
+          <h2 className="card-title font-orkney"> {title.toUpperCase()} </h2>
+          <p className="h-auto">{description}</p>
+        </div>
+      )}
+      <Image
+        className="m-2 self-center w-[500px] max-h-[350px]"
+        height={176}
+        width={264}
+        src={src}
+        alt="Global"
+        loading="lazy"
+      />
+      {!left && (
+        <div className="card-body w-full max-w-md self-center">
+          <h2 className="card-title font-orkney"> {title.toUpperCase()} </h2>
+          <p className="h-auto">{description}</p>
+        </div>
+      )}
+    </motion.div>
+  );
+};
