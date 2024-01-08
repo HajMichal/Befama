@@ -47,7 +47,11 @@ const NavBar = () => {
       <div
         id="NavBar"
         className={`z-30 fixed top-0 w-full flex items-center duration-200 px-5
-          ${color ? " sm:h-20 bg-white shadow-2xl" : " sm:h-32"}`}
+          ${
+            color || router.pathname !== "/"
+              ? "sm:h-20 bg-white shadow-2xl"
+              : "sm:h-32"
+          }`}
       >
         <div className="flex  sm:gap-5 gap-1 mx-0 md:mx-5 lg:mx-20">
           <div className="w-14 h-full sm:w-20">
@@ -62,7 +66,9 @@ const NavBar = () => {
                 width={64}
                 height={64}
                 className={`rounded-full h-12 w-12 m-1 ${
-                  color ? "sm:h-16 sm:w-16" : "sm:h-20 sm:w-20 shadow-2xl"
+                  color || router.pathname !== "/"
+                    ? "sm:h-16 sm:w-16"
+                    : "sm:h-20 sm:w-20 shadow-2xl"
                 }`}
                 priority={true}
               />
@@ -252,17 +258,17 @@ const NavButton = ({ title, href, router, color = false }: NavButtonType) => {
       <Link
         href={href}
         className={
-          color
+          color || router.pathname !== "/"
             ? "text-sm text-black font-orkney"
             : "text-lg font-medium font-orkney"
         }
-        onClick={(e) => handleClick(e, "")}
+        onClick={(e) => handleClick(e, href)}
       >
         {title.toUpperCase()}
       </Link>
       <span
         className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-px ${
-          color ? "bg-black" : "bg-white"
+          color || router.pathname !== "/" ? "bg-black" : "bg-white"
         }`}
       ></span>
     </div>
