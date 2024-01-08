@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
 
-import Link  from "next/link";
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
 
 import { useTranslation } from "next-i18next";
 
 import { useInView } from "framer-motion";
-
 
 const Machnies = () => {
   const { t } = useTranslation();
@@ -91,9 +90,9 @@ const Machnies = () => {
       }}
     >
       <div className="w-full flex justify-center">
-        <h1 className="md:text-5xl text-3xl text-center font-bold  py-5 my-5 mb-10 rounded-lg w-3/5 sm:w-2/5">
+        <h1 className="md:text-5xl text-3xl text-center font-semibold  py-5 my-5 mb-10 rounded-lg w-3/5 sm:w-2/5 font-orkney">
           {" "}
-          {t("offer")}{" "}
+          {t("offer").toUpperCase()}{" "}
         </h1>
       </div>
 
@@ -116,9 +115,9 @@ const Machnies = () => {
               <h2 className="card-title">{machine.type}</h2>
 
               <div className="justify-end mt-auto z-20">
-                <Link href={"/machines/" + machine.type}
+                <Link
+                  href={"/machines/" + machine.type}
                   className="btn hover:scale-110 duration-200 text-stone-300"
-                  
                 >
                   {" "}
                   {t("learn_more")}

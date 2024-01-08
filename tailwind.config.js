@@ -5,30 +5,28 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    
     fontFamily: {
-      'impact': ["Impact"]
+      impact: ["Impact"],
+      orkney: ["var(--font-Orkney)", "sans-serif"],
     },
     extend: {
       blur: {
-        xs: '2px'
+        xs: "2px",
       },
       screens: {
-        'sm': '506px',
+        sm: "506px",
         // => @media (min-width: 506px) { ... }
-  
-        'md': '990px',
+
+        md: "990px",
         // => @media (min-width: 860px) { ... }
-  
-        'lg': '1440px',
+
+        lg: "1440px",
         // => @media (min-width: 1440px) { ... }
       },
     },
   },
-  plugins: [
-    require("daisyui"),
-  ],
+  plugins: [require("daisyui")],
   daisyui: {
     base: false,
-  }
-}
+  },
+};

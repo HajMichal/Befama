@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white font-orkney font-normal">
       <NavBar />
       <Hero />
       <Machine />

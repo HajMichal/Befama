@@ -41,13 +41,13 @@ const Hero = () => {
           }}
         >
           <div id="tittle">
-            <p className="text-4xl sm:text-5xl md:text-6xl text-white text-center font-medium  justify-center">
+            <p className="text-2xl sm:text-3xl md:text-4xl text-white text-center justify-center font-semibold font-orkney">
               {" "}
-              {t("welcome")}{" "}
+              {t("welcome").toUpperCase()}{" "}
             </p>
-            <p className="text-lg sm:text-xl md:text-2xl text-white text-center font-medium flex mt-2 justify-center">
+            <p className="text-md sm:text-lg md:text-xl text-white text-center font-medium flex mt-2 justify-center">
               {" "}
-              {t("subtitle")}{" "}
+              {t("subtitle").toUpperCase()}{" "}
             </p>
           </div>
         </span>
