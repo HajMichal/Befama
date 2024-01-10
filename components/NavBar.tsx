@@ -48,7 +48,8 @@ const NavBar = () => {
         id="NavBar"
         className={`z-30 fixed top-0 w-full flex items-center duration-200 px-5
           ${
-            color || router.pathname !== "/"
+            color ||
+            (router.pathname !== "/" && router.pathname !== "/services")
               ? "sm:h-20 bg-white shadow-2xl"
               : "sm:h-32"
           }`}
@@ -66,7 +67,8 @@ const NavBar = () => {
                 width={64}
                 height={64}
                 className={`rounded-full h-12 w-12 m-1 ${
-                  color || router.pathname !== "/"
+                  color ||
+                  (router.pathname !== "/" && router.pathname !== "/services")
                     ? "sm:h-16 sm:w-16"
                     : "sm:h-20 sm:w-20 shadow-2xl"
                 }`}
@@ -258,7 +260,7 @@ const NavButton = ({ title, href, router, color = false }: NavButtonType) => {
       <Link
         href={href}
         className={
-          color || router.pathname !== "/"
+          color || (router.pathname !== "/" && router.pathname !== "/services")
             ? "text-sm text-black font-orkney"
             : "text-lg font-medium font-orkney"
         }
@@ -268,7 +270,9 @@ const NavButton = ({ title, href, router, color = false }: NavButtonType) => {
       </Link>
       <span
         className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-px ${
-          color || router.pathname !== "/" ? "bg-black" : "bg-white"
+          color || (router.pathname !== "/" && router.pathname !== "/services")
+            ? "bg-black"
+            : "bg-white"
         }`}
       ></span>
     </div>

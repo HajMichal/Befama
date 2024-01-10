@@ -10,6 +10,9 @@ module.exports = {
       orkney: ["var(--font-Orkney)", "sans-serif"],
     },
     extend: {
+      backgroundImage: {
+        paralaxImage: "url('/gears.jpg')",
+      },
       blur: {
         xs: "2px",
       },

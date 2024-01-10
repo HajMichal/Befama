@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 
 import { MACHINES, TEXT } from "../../data2";
 import Head from "next/head";
+import Contact from "@/components/Contact";
 
 interface contextType {
   params: { [key: string]: string };
@@ -366,20 +367,7 @@ export default function Machines(props: { context: contextType }) {
             ))}
           </div>
           )
-          <div className="h-72 w-full bg-slate-600 mb-32 items-center py-14">
-            <h3 className="w-full text-center text-white text-4xl font-semibold my-5">
-              {thisTexts.contact_with}
-            </h3>
-            <p className="w-full text-center text-white text-xl">
-              info@befama.com.pl
-            </p>
-            <p className="w-full text-center text-white text-xl">
-              {thisTexts.street} Północna 212
-            </p>
-            <p className="w-full text-center text-white text-xl">
-              43-376 Kalna
-            </p>
-          </div>
+          <Contact />
         </div>
 
         <Footer />
