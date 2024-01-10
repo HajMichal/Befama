@@ -28,10 +28,10 @@ const Footer = () => {
           {thisTexts.adress.toUpperCase()}
         </h1>
         <ul className="text-center text-base">
-          <li className="my-2 text-teal-300 ">
+          <li className="my-2 text-[#499cc7]">
             {thisTexts.street} Północna 212 <br /> 43-376 Kalna
           </li>
-          <li className="my-2 text-teal-300 ">
+          <li className="my-2 text-[#499cc7]">
             {thisTexts.street} J.Grabowskiego 4/4 <br /> 43-300 Bielsko-Biała
           </li>
         </ul>
@@ -40,27 +40,27 @@ const Footer = () => {
         <h1 className="text-center text-2xl font-semibold text-zinc-100 font-orkney">
           {thisTexts.contact.toUpperCase()}
         </h1>
-        <ul className="text-teal-300 text-center text-base">
-          <li className="my-2 text-teal-300 ">
+        <ul className="text-[#499cc7]text-center text-base">
+          <li className="my-2 text-[#499cc7]">
             {thisTexts.phone} +48 33 8 611 760 <br />
             e-mail: info@befama.com.pl
           </li>
-          <li className="my-2 underline md:no-underline text-teal-300 ">
+          <li className="my-2 underline md:no-underline text-[#499cc7]">
             <Link href="/department" className="link link-hover">
               {thisTexts.selldep}
             </Link>
           </li>
-          <li className="my-2 underline md:no-underline text-teal-300 ">
+          <li className="my-2 underline md:no-underline text-[#499cc7]">
             <Link href="/department" className="link link-hover">
               {thisTexts.constructdep}
             </Link>
           </li>
-          <li className="my-2 underline md:no-underline text-teal-300 ">
+          <li className="my-2 underline md:no-underline text-[#499cc7]">
             <Link href="/department" className="link link-hover">
               {thisTexts.autodep}
             </Link>
           </li>
-          <li className="my-2 underline md:no-underline text-teal-300 ">
+          <li className="my-2 underline md:no-underline text-[#499cc7]">
             <Link href="/department" className="link link-hover">
               {thisTexts.deldep}
             </Link>
@@ -83,7 +83,7 @@ const Footer = () => {
         <p className="text-center text-sm text-zinc-200 max-w-xs">
           INFORMUJEMY, ŻE AKTA OSOBOWE I DOKUMENTY PŁACOWE BYŁYCH PRACOWNIKÓW
           BEFAMY ZNAJDUJĄ SIĘ W:{" "}
-          <label className="text-teal-300">
+          <label className="text-[#499cc7]">
             ARCHIWUM ZLIKWIDOWANYCH PRZEDSIĘBIORSTW PAŃSTWOWYCH 43-100 TYCHY,
             UL. PRZEMYSŁOWA 51, TEL. 32 326 46 08
           </label>{" "}
@@ -95,7 +95,7 @@ const Footer = () => {
       <div id="WEB_AUTHOR" className="w-full text-center  text-gray-300 ">
         <hr className="border-1 border-zinc-100" />
         <div>
-          <h1 className="p-2 mt-2"> Befama ®2023</h1>
+          <h1 className="p-2 mt-2"> Befama ®2024</h1>
         </div>
       </div>
     </div>

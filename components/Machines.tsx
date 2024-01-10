@@ -16,44 +16,44 @@ const Machnies = () => {
   const machines = [
     {
       type: t("bale"),
-      src: "/machines/otwieracze.webp",
+      src: "/machines/otwieracze.png",
       tag: [{ name: "OB1" }, { name: "OB2" }],
     },
     {
       type: t("transport"),
-      src: "/machines/zbiorczy_transport.webp",
+      src: "/machines/zbiorczy_transport.png",
       tag: [{ name: "TYP TP" }, { name: "TYP TPR" }],
     },
     {
       type: t("opening"),
-      src: "/machines/rozluzniajace.webp",
+      src: "/machines/rozluzniajace.png",
       tag: [{ name: "AB6" }, { name: "AB19" }, { name: "AB19G" }],
     },
 
     {
       type: t("mixing"),
-      src: "/machines/mieszalnicze.webp",
+      src: "/machines/mieszalnicze.png",
       tag: [{ name: "KMC1500" }, { name: "KMC3000" }, { name: "MW6" }],
     },
     {
       type: t("nonwoven"),
-      src: "/machines/wloknin.webp",
+      src: "/machines/wloknin.png",
       tag: [{ name: "CU611" }, { name: "CU641" }, { name: "CU661" }],
     },
     {
       type: t("carding"),
-      src: "/machines/przedza.webp",
+      src: "/machines/przedza.png",
       tag: [{ name: "TYP CR" }, { name: "TYP CS" }],
     },
     {
       type: t("lab"),
-      src: "/machines/labolatoryjne.webp",
+      src: "/machines/labolatoryjne.png",
       tag: [{ name: "3KA" }, { name: "3AGK" }],
     },
-    { type: t("crosslappers"), src: "/machines/ukladacz.webp", tag: [] },
+    { type: t("crosslappers"), src: "/machines/ukladacz.png", tag: [] },
     {
       type: t("webdrafters"),
-      src: "/machines/runo.webp",
+      src: "/machines/runo.png",
       tag: [{ name: "5W50" }, { name: "5WN700" }, { name: "Seria WD" }],
     },
     {
@@ -68,12 +68,12 @@ const Machnies = () => {
     },
     {
       type: t("filters"),
-      src: "/machines/kondensery.webp",
+      src: "/machines/kondensery.png",
       tag: [{ name: "Kondensery obrotowe, cyklony, filtry" }],
     },
     {
       type: t("pneumatic"),
-      src: "/machines/transporter.webp",
+      src: "/machines/transporter.png",
       tag: [{ name: "Instalacje transportu pneumatycznego" }],
     },
   ];
