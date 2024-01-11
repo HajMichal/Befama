@@ -32,8 +32,8 @@ const Department = () => {
     >
       <NavBar />
       <div className="pt-24 flex justify-center flex-wrap bg-white">
-        <div className="flex justify-center text-2xl md:text-4xl text-center font-bold py-8 w-full">
-          <h1>{t("dep_header")}</h1>
+        <div className="flex justify-center text-2xl md:text-4xl text-center font-bold py-8 w-full font-orkney">
+          <h1>{t("dep_header").toUpperCase()}</h1>
         </div>
         <div className="flex flex-wrap justify-center max-w-5xl lg:gap-20 md:gap-10 py-10">
           <div className="flex items-center flex-col">

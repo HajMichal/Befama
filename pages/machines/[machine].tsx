@@ -9,12 +9,9 @@ import {
 import { AiOutlineColumnWidth } from "react-icons/ai";
 import { FaDrumSteelpan } from "react-icons/fa";
 
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-
+import { NavBar, Footer, Contact } from "../../components";
 import { MACHINES, TEXT } from "../../data2";
 import Head from "next/head";
-import Contact from "@/components/Contact";
 
 interface contextType {
   params: { [key: string]: string };
@@ -37,7 +34,7 @@ interface thisParams {
 }
 
 export default function Machines(props: { context: contextType }) {
-  const { locale, locales, defaultLocale } = props.context;
+  const { locale } = props.context;
 
   var thisMachine = props.context.params.machine;
   var thisTexts: any = TEXT[locale].text as string;

@@ -15,8 +15,7 @@ const NavBar = () => {
   const { locale, locales } = useRouter();
   const router = useRouter();
 
-  // @ts-ignore
-  const thisTexts: any = TEXT[locale].text as string;
+  const thisTexts: any = TEXT[locale!].text as string;
 
   const handleClick = (e: any, href: string) => {
     e.preventDefault();

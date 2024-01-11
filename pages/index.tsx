@@ -1,15 +1,17 @@
 import React from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import NavBar from "@/components/NavBar";
-import Hero from "@/components/Hero";
-import Machine from "@/components/Machines";
-import Services from "@/components/Servs";
-import Aboutus from "@/components/Aboutus";
-import Workus from "@/components/Workus";
-import ContactForm from "@/components/ContactForm";
-import Map from "@/components/Map";
-import Footer from "@/components/Footer";
+import {
+  NavBar,
+  Hero,
+  Machine,
+  Services,
+  Aboutus,
+  Workus,
+  ContactForm,
+  Map,
+  Footer,
+} from "../components";
 
 export default function Home() {
   return (
@@ -19,7 +21,10 @@ export default function Home() {
       <Machine />
       <Services />
       <Aboutus />
-      <div className=" py-8 flex justify-center flex-wrap gap-10 mt-10 bg-wave bg-no-repeat bg-bottom">
+      <div
+        id="workwithus"
+        className=" py-8 flex justify-center flex-wrap gap-10 mt-10 bg-wave bg-no-repeat bg-bottom"
+      >
         <Workus />
         <ContactForm />
       </div>
