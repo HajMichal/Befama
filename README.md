@@ -13,7 +13,7 @@ Hello there, welcome to the README file for my first commercial project. This en
 ###### Addressing poor image quality was a crucial aspect of this project. I received old, bad light images and I had to pick the best ones and use them. Efforts were made to enhance image resolution and clarity, ensuring a visually appealing and professional appearance.
 
 ### 3. Responsive Design 📱💻
-###### The website is built with a responsive design, adapting gracefully to different screen sizes. Whether viewed on a mobile phone, tablet, or a larger desktop screen, users can expect a consistent and optimized experience.
+###### The website is built with a responsive design that I have created. It is adapting gracefully to different screen sizes. Whether viewed on a mobile phone, tablet, or a larger desktop screen, users can expect a consistent and optimized experience.
 
 ## What I've learned ?🎓
 
