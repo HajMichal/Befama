@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import { TEXT } from "../data2";
 import { useRouter } from "next/router";
 
-const Contact = () => {
+export const Contact = () => {
   const { locale, locales } = useRouter();
 
   const thisTexts: any = TEXT[locale!].text as string;
@@ -23,5 +23,3 @@ const Contact = () => {
     </div>
   );
 };
-
-export default Contact;

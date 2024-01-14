@@ -8,10 +8,7 @@ import { useInView } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
-import ContactForm from "../components/ContactForm";
-import Map from "../components/Map";
+import { Footer, NavBar, ContactForm, Map, Hero } from "../components";
 import { LuMail, LuPhoneCall } from "react-icons/lu";
 
 const Department = () => {
@@ -31,19 +28,17 @@ const Department = () => {
       }}
     >
       <NavBar />
-      <div className="pt-24 flex justify-center flex-wrap bg-white">
-        <div className="flex justify-center text-2xl md:text-4xl text-center font-bold py-8 w-full font-orkney">
-          <h1>{t("dep_header").toUpperCase()}</h1>
-        </div>
-        <div className="flex flex-wrap justify-center max-w-5xl lg:gap-20 md:gap-10 py-10">
-          <div className="flex items-center flex-col">
+      <Hero url="/outside.webp" title={t("dep_header")!} />
+      <div className=" flex justify-center flex-wrap bg-white">
+        <div className="flex flex-wrap justify-center max-w-5xl lg:gap-20 md:gap-10 ">
+          <div className="flex items-center flex-col pt-10">
             <LuPhoneCall className="w-12 h-12" />
             <p className=" text-xl mt-8">+48 33 8 611 760</p>
             <p className=" text-xl mt-5">+48 796 150 368</p>
             <p className=" text-xl mt-5">+48 514 598 117</p>
           </div>
-          <div className="h-full border-l" />
-          <div className="flex items-center flex-col ">
+          <div className="h-72 border-l" />
+          <div className="flex items-center flex-col pt-10">
             <LuMail className="w-12 h-12" />
             <p className=" text-xl mt-8 ">info@befama.com.pl</p>
           </div>

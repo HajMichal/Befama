@@ -3,10 +3,9 @@ import { useTranslation } from "next-i18next";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from "next/image";
 
-const Workus = () => {
-
+export const Career = () => {
   const { t } = useTranslation();
 
   const ref = useRef(null);
@@ -35,14 +34,11 @@ const Workus = () => {
         <h2 className="card-title"> {t("work_w_us")} </h2>
         <p> {t("if_you")} </p>
         <div className="card-actions">
-          <Link href={"/work"} legacyBehavior><button className="btn btn-primary">
-            {" "}
-            {t("who_we_need")}{" "}
-          </button></Link>
+          <Link href={"/work"} legacyBehavior>
+            <button className="btn btn-primary"> {t("who_we_need")} </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 };
-
-export default Workus;

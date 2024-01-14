@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { HEADERS } from "@/data2";
+import { HEADERS } from "../data2";
 
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -8,6 +8,7 @@ import type { AppProps } from "next/app";
 import localFont from "next/font/local";
 import { appWithTranslation } from "next-i18next";
 import "i18next";
+import React from "react";
 
 declare module "i18next" {
   interface CustomTypeOptions {

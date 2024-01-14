@@ -13,12 +13,11 @@ interface inputs {
   message: string;
 }
 
-
-const ContactForm = () => {
+export const ContactForm = () => {
   const { t } = useTranslation();
 
   const ref = useRef(null);
-  const form = useRef <HTMLFormElement | null>(null);
+  const form = useRef<HTMLFormElement | null>(null);
 
   const { register, handleSubmit } = useForm<inputs>({
     defaultValues: {
@@ -32,8 +31,6 @@ const ContactForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-
-
   const onSubmit = (_data: inputs) => {
     if (!form.current) return;
 
@@ -41,12 +38,12 @@ const ContactForm = () => {
       from_name: _data.name,
       from_phone: _data.phone,
       email_id: _data.email,
-      message: _data.message
-    }
+      message: _data.message,
+    };
     emailjs
       .send(
         process.env.NEXT_PUBLIC_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID!,    
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
         params,
         process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
@@ -91,33 +88,36 @@ const ContactForm = () => {
         className="p-3 flex flex-wrap justify-center"
         onSubmit={handleSubmit(onSubmit)}
       >
-
         <input
-        {...register("name", {required: true})}
+          {...register("name", { required: true })}
           className="input input-bordered input-primary w-full max-w-xs my-1 bg-white"
           type="text"
           name="name"
-          placeholder={t("names")}
+          placeholder={t("names")!}
         />
         <input
-        {...register("phone", {required: true})}
+          {...register("phone", { required: true })}
           className="input input-bordered input-primary w-full max-w-xs my-1 bg-white"
           type="text"
           name="phone"
-          placeholder={t("number")}
+          placeholder={t("number")!}
         />
         <input
-        {...register("email", {required: true})}
+          {...register("email", { required: true })}
           className="input input-bordered input-primary w-full max-w-xs my-1 bg-white"
           type="email"
           name="email"
-          placeholder={t("e-mail")}
+          placeholder={t("e-mail")!}
         />
         <textarea
-        {...register("message", {required: true, minLength: 8, maxLength: 1028,})}
+          {...register("message", {
+            required: true,
+            minLength: 8,
+            maxLength: 1028,
+          })}
           className="textarea textarea-primary w-full h-40 max-w-xs max-h-72 my-3 bg-white"
           name="message"
-          placeholder={t("question_content")}
+          placeholder={t("question_content")!}
         ></textarea>
         <div className="justify-end flex w-4/5">
           <button
@@ -133,7 +133,3 @@ const ContactForm = () => {
     </div>
   );
 };
-// info@befama.com.pl
-export default ContactForm;
-
-

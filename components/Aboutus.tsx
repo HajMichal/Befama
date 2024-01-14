@@ -1,10 +1,9 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import { useInView, motion } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
 
-const Aboutus = () => {
+export const Aboutus = () => {
   const { t } = useTranslation();
 
   return (
@@ -124,8 +123,6 @@ const Aboutus = () => {
     </div>
   );
 };
-
-export default Aboutus;
 
 interface FactComponentType {
   title: string;

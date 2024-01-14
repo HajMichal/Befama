@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next";
 
 import { useInView } from "framer-motion";
 
-const Machnies = () => {
+export const Machines = () => {
   const { t } = useTranslation();
 
   const ref = useRef(null);
@@ -58,7 +58,7 @@ const Machnies = () => {
     },
     {
       type: t("recovery"),
-      src: "/machines/recykling.webp",
+      src: "/machines/linia-recyklingu.png",
       tag: [
         { name: "Szarparki krajek AC4B" },
         { name: "Szarparka rdpadów AC5" },
@@ -90,7 +90,10 @@ const Machnies = () => {
       }}
     >
       <div className="w-full flex justify-center">
-        <h1 className="md:text-5xl text-3xl text-center font-semibold  py-5 my-5 mb-10 rounded-lg w-3/5 sm:w-2/5 font-orkney">
+        <h1
+          className="md:text-5xl text-3xl text-center font-semibold  py-5 my-5 mb-10 rounded-lg w-3/5 sm:w-2/5 font-orkney  tracking-wider
+        "
+        >
           {" "}
           {t("offer").toUpperCase()}{" "}
         </h1>
@@ -131,5 +134,3 @@ const Machnies = () => {
     </div>
   );
 };
-
-export default Machnies;

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { NextRouter, useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
 import { MenuOutlined, GlobalOutlined } from "@ant-design/icons";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { FiMapPin } from "react-icons/fi";
+
 import "flag-icons/css/flag-icons.min.css";
-
-import { NextRouter, useRouter } from "next/router";
-
 import { TEXT } from "../data2";
+import { Button } from "./navbar/button";
 
-const NavBar = () => {
+export const NavBar = () => {
   const { locale, locales } = useRouter();
   const router = useRouter();
 
@@ -48,7 +48,9 @@ const NavBar = () => {
         className={`z-30 fixed top-0 w-full flex items-center duration-200 px-5
           ${
             color ||
-            (router.pathname !== "/" && router.pathname !== "/services")
+            (router.pathname !== "/" &&
+              router.pathname !== "/services" &&
+              router.pathname !== "/department")
               ? "sm:h-20 bg-white shadow-2xl"
               : "sm:h-32"
           }`}
@@ -67,7 +69,9 @@ const NavBar = () => {
                 height={64}
                 className={`rounded-full h-12 w-12 m-1 ${
                   color ||
-                  (router.pathname !== "/" && router.pathname !== "/services")
+                  (router.pathname !== "/" &&
+                    router.pathname !== "/services" &&
+                    router.pathname !== "/department")
                     ? "sm:h-16 sm:w-16"
                     : "sm:h-20 sm:w-20 shadow-2xl"
                 }`}
@@ -77,37 +81,32 @@ const NavBar = () => {
           </div>
 
           <div className="flex items-center font-medium sm:text-lg md:text-xl md:ml-10 lg:ml-20 lg:gap-5 ">
-            <NavButton
-              title="Home"
-              href="#home"
-              router={router}
-              color={color}
-            />
-            <NavButton
+            <Button title="Home" href="#home" router={router} color={color} />
+            <Button
               title={thisTexts.about_us}
               href="#aboutUs"
               router={router}
               color={color}
             />
-            <NavButton
+            <Button
               title={thisTexts.machines}
               href="#machines"
               router={router}
               color={color}
             />
-            <NavButton
+            <Button
               title={thisTexts.services}
               href="#serv"
               router={router}
               color={color}
             />
-            <NavButton
+            <Button
               title={thisTexts.career}
               href="#workwithus"
               router={router}
               color={color}
             />
-            <NavButton
+            <Button
               title={thisTexts.contact}
               href="/department"
               router={router}
@@ -232,48 +231,6 @@ const NavBar = () => {
           </a>
         </Link>
       </div>
-    </div>
-  );
-};
-
-export default NavBar;
-
-interface NavButtonType {
-  title: string;
-  href: string;
-  router: NextRouter;
-  color?: boolean;
-}
-const NavButton = ({ title, href, router, color = false }: NavButtonType) => {
-  const handleClick = (e: any, href: string) => {
-    e.preventDefault();
-    router.pathname === "/" ? router.push(href) : router.push("/" + href);
-  };
-
-  return (
-    <div
-      className={
-        "cursor-pointer group transition-all duration-300 pl-3 sm:p-3 text-white whitespace-nowrap hidden md:block "
-      }
-    >
-      <Link
-        href={href}
-        className={
-          color || (router.pathname !== "/" && router.pathname !== "/services")
-            ? "text-sm text-black font-orkney"
-            : "text-lg font-medium font-orkney"
-        }
-        onClick={(e) => handleClick(e, href)}
-      >
-        {title.toUpperCase()}
-      </Link>
-      <span
-        className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-px ${
-          color || (router.pathname !== "/" && router.pathname !== "/services")
-            ? "bg-black"
-            : "bg-white"
-        }`}
-      ></span>
     </div>
   );
 };

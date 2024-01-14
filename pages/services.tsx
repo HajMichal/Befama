@@ -10,10 +10,7 @@ import { MdControlCamera } from "react-icons/md";
 import { BiCylinder } from "react-icons/bi";
 import { GiMechanicalArm } from "react-icons/gi";
 
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import { ImageSlider } from "@/components/ImageSlider";
-import Contact from "@/components/Contact";
+import { NavBar, Footer, ImageSlider, Contact } from "../components";
 
 const Serv = () => {
   const { t } = useTranslation();
@@ -28,18 +25,9 @@ const Serv = () => {
     <div className="bg-stone-100">
       <NavBar />
       <ImageSlider />
-      {/* <div className="w-full flex justify-center z-[999999999999] pt-20">
-        <h1 className="text-4xl sm:text-6xl text-white font-semibold w-full max-w-md text-center my-8 sm:mt-12 sm:text-left sm:ml-14 md:max-w-3xl font-orkney">
-          {t("serv_title").toUpperCase()}
-        </h1>
-      </div> */}
+
       <div className="pt-[100vh]">
         <div className="flex flex-wrap justify-center ">
-          {/* <div className="w-screen grid grid-cols-3 h-96">
-            <div className="flex items-center justify-center bg-fixed bg-servParallax1 bg-cover h-full"></div>
-            <div className="flex items-center justify-center bg-fixed bg-servParallax2 bg-cover h-full"></div>
-            <div className="flex items-center justify-center bg-fixed bg-servParallax3 bg-cover h-full"></div>
-          </div> */}
           <div className="flex flex-wrap justify-center w-full h-full -mb-48 sm:mb-0">
             <div className="hidden sm:grid grid-cols-3 mt-5 w-3/4 max-w-5xl gap-5 justify-items-center md:flex-wrap justify-center md:mx-40">
               <Image

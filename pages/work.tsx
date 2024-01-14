@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import {
   MdBuild,
@@ -9,14 +9,11 @@ import {
   MdOutlineMiscellaneousServices,
 } from "react-icons/md";
 
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-
+import { NavBar, Footer } from "../components";
 
 const Work = () => {
   return (
     <div className="bg-stone-100">
-
       <div className="h-16 mb-1">
         <NavBar />
       </div>
@@ -166,15 +163,12 @@ const Work = () => {
   );
 };
 
-
-
-
-export async function getStaticProps({ locale }: {locale: string}) {
+export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common']))
-    }
-  }
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }
 
 export default Work;

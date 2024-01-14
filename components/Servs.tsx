@@ -15,7 +15,7 @@ import { GrMapLocation } from "react-icons/gr";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { FaTools } from "react-icons/fa";
 
-const Services = () => {
+export const Services = () => {
   const { t } = useTranslation();
 
   const ref = useRef(null);
@@ -32,9 +32,9 @@ const Services = () => {
       }}
     >
       <div className="p-5 ">
-        <h1 className="text-4xl font-bold p-5 text-center mb-2">
+        <h1 className="text-4xl font-bold p-5 text-center mb-2 font-orkney tracking-wide">
           {" "}
-          {t("offer_title")}{" "}
+          {t("offer_title").toUpperCase()}{" "}
         </h1>
         <div className="flex gap-2 flex-wrap text-center justify-center">
           <div className="flex justify-center p-3">
@@ -79,5 +79,3 @@ const Services = () => {
     </div>
   );
 };
-
-export default Services;

@@ -1,23 +1,25 @@
-import Contact from "./Contact";
-import NavBar from "./NavBar";
-import Hero from "./Hero";
-import Machine from "./Machines";
-import Services from "./Servs";
-import Aboutus from "./Aboutus";
-import Workus from "./Workus";
-import ContactForm from "./ContactForm";
-import Map from "./Map";
-import Footer from "./Footer";
+import { Contact } from "./Contact";
+import { NavBar } from "./NavBar";
+import { Machines } from "./Machines";
+import { Services } from "./Servs";
+import { Aboutus } from "./Aboutus";
+import { Career } from "./Career";
+import { ContactForm } from "./ContactForm";
+import { Map } from "./Map";
+import { Hero } from "./Hero";
+import { Footer } from "./Footer";
+import { ImageSlider } from "./ImageSlider";
 
 export {
   Contact,
   NavBar,
-  Hero,
-  Machine,
+  Machines,
   Services,
   Aboutus,
-  Workus,
+  Career,
   ContactForm,
   Map,
+  Hero,
   Footer,
+  ImageSlider,
 };

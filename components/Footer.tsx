@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import { TEXT } from "../data2";
 
-const Footer = () => {
+export const Footer = () => {
   const { locale, locales } = useRouter();
 
   // @ts-ignore
@@ -101,5 +101,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;
