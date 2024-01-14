@@ -9,31 +9,27 @@ interface HeroType {
 }
 export const Hero = ({ url, title, subTitle, small = false }: HeroType) => {
   const ref = useRef(null);
-
   const isInView = useInView(ref, { once: false });
 
   const controls = useAnimation();
 
-  // Define the animation
   const animation = {
     hidden: { opacity: 1, y: 50 },
     visible: { opacity: 1, y: -50 },
   };
 
-  // Set up the animation controls
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const isVisible = scrollY > 90; // Adjust the threshold as needed
-
-    controls.start(isVisible ? "visible" : "hidden");
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const isVisible = scrollY > 90;
+      controls.start(isVisible ? "visible" : "hidden");
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [controls]);
   return (
     <div className="bg-black">
       <div

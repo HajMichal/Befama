@@ -10,23 +10,20 @@ import { MdControlCamera } from "react-icons/md";
 import { BiCylinder } from "react-icons/bi";
 import { GiMechanicalArm } from "react-icons/gi";
 
-import { NavBar, Footer, ImageSlider, Contact } from "../components";
+import { NavBar, Footer, ImageSlider, Contact, Hero } from "../components";
 
 const Serv = () => {
   const { t } = useTranslation();
 
-  const slides = [
-    { url: "/services/falowniki.webp" },
-    { url: "/services/relokacja.webp" },
-    { url: "/services/wilk.webp" },
-  ];
-
   return (
     <div className="bg-stone-100">
       <NavBar />
-      <ImageSlider />
 
-      <div className="pt-[100vh]">
+      <Hero url="/services/relokacja.webp" title={t("offer_title")!} />
+
+      {/* <ImageSlider />
+      <div className="pt-[100vh]"> */}
+      <div className="">
         <div className="flex flex-wrap justify-center ">
           <div className="flex flex-wrap justify-center w-full h-full -mb-48 sm:mb-0">
             <div className="hidden sm:grid grid-cols-3 mt-5 w-3/4 max-w-5xl gap-5 justify-items-center md:flex-wrap justify-center md:mx-40">

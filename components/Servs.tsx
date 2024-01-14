@@ -32,7 +32,7 @@ export const Services = () => {
       }}
     >
       <div className="p-5 ">
-        <h1 className="text-4xl font-bold p-5 text-center mb-2 font-orkney tracking-wide">
+        <h1 className="text-4xl font-bold p-5 text-center mb-2 font-orkney tracking-wider">
           {" "}
           {t("offer_title").toUpperCase()}{" "}
         </h1>
