@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
 interface HeroType {
@@ -11,25 +11,29 @@ export const Hero = ({ url, title, subTitle, small = false }: HeroType) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
-  const controls = useAnimation();
-
   const animation = {
     hidden: { opacity: 1, y: 50 },
     visible: { opacity: 1, y: -50 },
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const isVisible = scrollY > 90;
-      controls.start(isVisible ? "visible" : "hidden");
+      if (typeof window !== "undefined") {
+        const scrollY = window.scrollY;
+        setIsVisible(scrollY > 90);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [controls]);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []);
   return (
     <div className="bg-black">
       <div
@@ -57,7 +61,7 @@ export const Hero = ({ url, title, subTitle, small = false }: HeroType) => {
         >
           <motion.div
             id="tittle"
-            animate={controls}
+            animate={{ opacity: 1, y: isVisible ? -50 : 50 }}
             initial="hidden"
             variants={animation}
           >
