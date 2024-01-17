@@ -9,7 +9,7 @@ import { FiMapPin } from "react-icons/fi";
 
 import "flag-icons/css/flag-icons.min.css";
 import { TEXT } from "../data2";
-import { Button } from "./navbar/button";
+import { Button } from "./navbar/Button";
 
 export const NavBar = () => {
   const { locale, locales } = useRouter();
