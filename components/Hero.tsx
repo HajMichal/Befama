@@ -61,7 +61,7 @@ export const Hero = ({ url, title, subTitle, small = false }: HeroType) => {
         >
           <motion.div
             id="tittle"
-            animate={{ opacity: 1, y: isVisible ? -50 : 50 }}
+            animate={{ opacity: 1, y: isVisible ? -100 : 25 }}
             initial="hidden"
             variants={animation}
           >

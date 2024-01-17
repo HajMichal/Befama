@@ -99,33 +99,35 @@ export const Machines = () => {
         </h1>
       </div>
 
-      <div className="flex justify-center flex-wrap gap-10 lg:gap-16 lg:gap-x-28 lg:w-4/5 max-w-6xl">
+      <div className="flex justify-center flex-wrap gap-10 lg:gap-16 lg:gap-x-28 max-w-7xl">
         {machines.map((machine: any, index: React.Key) => (
-          <div
-            key={index}
-            className="card card-compact w-72 bg-white border-t shadow-xl p-3 overflow-visible"
-          >
-            <figure>
+          <div key={index} className="w-80 bg-white p-3 group">
+            <div
+              className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat group"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
               <Image
                 src={machine.src}
                 alt="Machine"
-                width={264}
-                height={176}
-                className="h-auto w-full rounded max-h-44 "
+                width={296}
+                height={222}
+                className="w-full h-[222px] duration-200 delay-75 group-hover:scale-110"
               />
-            </figure>
-            <div className="card-body overflow-visible">
-              <h2 className="card-title">{machine.type}</h2>
-
-              <div className="justify-end mt-auto z-20">
-                <Link
-                  href={"/machines/" + machine.type}
-                  className="btn hover:scale-110 duration-200 text-stone-300"
-                >
-                  {" "}
-                  {t("learn_more")}
-                </Link>
+              <div>
+                <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"></div>
               </div>
+            </div>
+            <div className="border border-t-transparent flex flex-wrap justify-center border-[#E2E2E2] -mt-14">
+              <h2 className="w-full font-orkney mt-[70px] text-center text-[#A7A7A7] text-2xl h-20 flex items-center justify-center px-3">
+                {machine.type.toUpperCase()}
+              </h2>
+              <Link
+                href={"/machines/" + machine.type}
+                className="border border-black p-2 px-3 my-5 duration-100 transition active:scale-125 hover:scale-105"
+              >
+                {t("learn_more")}
+              </Link>
             </div>
           </div>
         ))}
