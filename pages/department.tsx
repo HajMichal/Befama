@@ -34,8 +34,11 @@ const Department = () => {
           <div className="flex items-center flex-col pt-10">
             <LuPhoneCall className="w-12 h-12" />
             <p className=" text-xl mt-8">+48 33 8 611 760</p>
-            <p className=" text-xl mt-5">+48 796 150 368</p>
-            <p className=" text-xl mt-5">+48 514 598 117</p>
+            <Flag pl />
+            <p className=" text-xl mt-2">+48 796 150 368</p>
+            <Flag pl />
+            <p className=" text-xl mt-2">+48 514 598 117</p>
+            <Flag gb de />
           </div>
           <div className="h-72 border-l" />
           <div className="flex items-center flex-col pt-10">
@@ -84,6 +87,17 @@ const Department = () => {
       </div>
       <Footer />
     </div>
+  );
+};
+
+const Flag = ({ pl = false, gb = false, ru = false, de = false }) => {
+  return (
+    <span className="flex justify-center">
+      {pl && <span className={`fi fi-${"pl"} mx-1`}></span>}
+      {de && <span className={`fi fi-${"de"} mx-1`}></span>}
+      {gb && <span className={`fi fi-${"gb"} mx-1`}></span>}
+      {ru && <span className={`fi fi-${"ru"} mx-1`}></span>}
+    </span>
   );
 };
 
