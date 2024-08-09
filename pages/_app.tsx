@@ -17,7 +17,7 @@ declare module "i18next" {
 }
 
 const MyHeadTags = () => {
-  const { locale, locales } = useRouter();
+  const { locale } = useRouter();
 
   // @ts-ignore
   const thisHeaders: any = HEADERS[locale] as string;

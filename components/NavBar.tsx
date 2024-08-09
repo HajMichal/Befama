@@ -10,9 +10,12 @@ import { FiMapPin } from "react-icons/fi";
 import "flag-icons/css/flag-icons.min.css";
 import { TEXT } from "../data2";
 import { Button } from "./navbar/Button";
+import dynamic from "next/dynamic";
+
+const ChooseLang = dynamic(() => import("./ChooseLang"), { ssr: false });
 
 export const NavBar = () => {
-  const { locale, locales } = useRouter();
+  const { locale } = useRouter();
   const router = useRouter();
 
   const thisTexts: any = TEXT[locale!].text as string;
@@ -41,6 +44,7 @@ export const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div className="z-40">
       <div
@@ -129,10 +133,9 @@ export const NavBar = () => {
             </label>
             <ul className="dropdown-content p-2 rounded -left-10 sm:-left-0 mt-1 w-28 bg-white text-center shadow-xl border-t">
               <li className="hover:bg-gray-200 duration-200 py-3 rounded">
-                <Link href={"#serv"} onClick={(e) => handleClick(e, "#serv")}>
-                  {" "}
-                  {thisTexts.services}{" "}
-                </Link>
+                <a href={"#serv"} onClick={(e) => handleClick(e, "#serv")}>
+                  {thisTexts.services}
+                </a>
               </li>
               <li className="hover:bg-gray-200 duration-200 p-3 rounded">
                 <Link
@@ -157,45 +160,7 @@ export const NavBar = () => {
               </li>
             </ul>
           </div>
-
-          <div
-            className="dropdown dropdown-end md:mx-5 w-auto justify-center tooltip tooltip-bottom"
-            data-tip={thisTexts.languages}
-          >
-            <label tabIndex={0} className="-mx-2 sm:mx-0">
-              <GlobalOutlined
-                style={{
-                  fontSize: "1.75rem",
-                  cursor: "pointer",
-                }}
-              />
-            </label>
-            <form>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu-normal p-2 shadow bg-white rounded-box w-40 mt-4"
-              >
-                {locales?.map((l) => (
-                  <li
-                    className="hover:bg-slate-100 duration-150 px-4 rounded-lg"
-                    style={{ opacity: l === locale ? 0.5 : 1 }}
-                    key={l}
-                  >
-                    <button>
-                      <Link href={"/"} locale={l}>
-                        <span className={`fi fi-${l} mx-2 border-t`}></span>
-                        {l === "pl" ? "Polski" : null}
-                        {l === "gb" ? "English" : null}
-                        {l === "de" ? "Deutsch" : null}
-                        {l === "ru" ? "Русский" : null}
-                      </Link>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </form>
-          </div>
-
+          <ChooseLang />
           <div
             className="tooltip tooltip-bottom hidden md:block mx-3"
             data-tip={thisTexts.youtube}

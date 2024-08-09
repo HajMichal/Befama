@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="bg-white font-orkney font-normal">
       <NavBar />
-      <Hero url="/main.webp" title={t("welcome")} subTitle={t("subtitle")} />
+      <Hero url="/main.webp" title={t("welcome")!} subTitle={t("subtitle")!} />
       <Machines />
       <Services />
       <Aboutus />

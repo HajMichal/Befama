@@ -5,9 +5,8 @@ interface HeroType {
   url: string;
   title?: string;
   subTitle?: string;
-  small?: boolean;
 }
-export const Hero = ({ url, title, subTitle, small = false }: HeroType) => {
+export const Hero = ({ url, title, subTitle }: HeroType) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
