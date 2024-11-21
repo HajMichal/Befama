@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 import { useInView } from "framer-motion";
+import Link from "next/link";
 
 export const Machines = () => {
   const { t } = useTranslation();
@@ -121,12 +122,12 @@ export const Machines = () => {
               <h2 className="w-full font-orkney mt-[70px] text-center text-[#A7A7A7] text-2xl h-20 flex items-center justify-center px-3">
                 {machine.type.toUpperCase()}
               </h2>
-              <a
+              <Link
                 href={"/machines/" + machine.type}
                 className="border border-black p-2 px-3 my-5 duration-100 transition active:scale-125 hover:scale-105"
               >
                 {t("learn_more")}
-              </a>
+              </Link>
             </div>
           </div>
         ))}
